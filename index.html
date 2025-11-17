@@ -1,66 +1,83 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PSHacks — проекты</title>
-  <style>
-    body {
-      background: #0d1117;
-      color: #c9d1d9;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px;
-      text-align: center;
-    }
-    h1 { font-size: 42px; margin-bottom: 10px; }
-    p { opacity: 0.8; }
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 40px;
-      gap: 20px;
-    }
-    .card {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 20px;
-      width: 220px;
-      transition: 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #58a6ff;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSHacks — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>PSHacks</h1>
-<p>Мои мини-проекты и экспериментальные игры</p>
-
-<div class="projects">
-  <div class="card">
-    <h3>Minesweeper</h3>
-    <a href="https://pshacks.github.io/Minesweeper">Открыть</a>
+<header>
+  <div class="lang-switch">
+    <img src="https://flagcdn.com/w20/ru.png" class="flag" onclick="setLang('ru')">
+    <img src="https://flagcdn.com/w20/us.png" class="flag" onclick="setLang('en')">
   </div>
 
-  <div class="card">
-    <h3>Проект 2</h3>
-    <a href="#">Скоро...</a>
-  </div>
+  <img class="avatar fade-in" src="https://avatars.githubusercontent.com/u/5302606?v=4">
+  <h1 class="fade-in delay-1" data-lang="name">PSHacks (Andrew)</h1>
+  <p class="subtitle fade-in delay-2" data-lang="subtitle">Full-stack developer, game mechanics & clean UI lover</p>
+</header>
 
-  <div class="card">
-    <h3>Проект 3</h3>
-    <a href="#">Скоро...</a>
+<section class="projects">
+  <a href="https://pshacks.github.io/Minesweeper" target="_blank" class="card fade-in delay-1">
+    <h3 data-lang="mine-title">Minesweeper</h3>
+    <p data-lang="mine-desc">Classic Minesweeper clone recreated in JS.</p>
+  </a>
+
+  <a href="https://pshacks.github.io/rustGenetics" target="_blank" class="card fade-in delay-2">
+    <h3 data-lang="rust-title">Rust Genetics</h3>
+    <p data-lang="rust-desc">Tool for computing plant genetics in Rust.</p>
+  </a>
+
+  <a href="https://pshacks.github.io/ScheduleMixer" target="_blank" class="card fade-in delay-3">
+    <h3 data-lang="sched-title">Schedule Mixer</h3>
+    <p data-lang="sched-desc">Utility for mixing and analyzing game elements.</p>
+  </a>
+
+  <a href="https://github.com/PSHacks/Words-Of-Wonders-Telegram-Bot" target="_blank" class="card fade-in delay-4">
+    <h3 data-lang="wow-title">Words of Wonders Bot</h3>
+    <p data-lang="wow-desc">Simple Telegram bot for game named Words of Wonders🎮.</p>
+  </a>
+</section>
+
+<section class="about fade-in delay-1">
+  <h2 data-lang="about-title">About me</h2>
+  <p data-lang="about-text1">
+    I am Andrew (@PSHacks), a full-stack developer. I love game mechanics, reverse engineering, and building intuitive applications with clean UI.
+  </p>
+  <p data-lang="about-text2">
+    Main skills: HTML, CSS, JS, Python, Rust, C#, C++, Delphi.
+  </p>
+</section>
+
+<section class="skills fade-in delay-2">
+  <h2 data-lang="skills-title">Skills</h2>
+  <div class="skills-list">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Python</div>
+    <div class="skill">Rust</div>
+    <div class="skill">C#</div>
+    <div class="skill">C++</div>
+    <div class="skill">Delphi</div>
   </div>
-</div>
+</section>
+
+<section class="contact fade-in delay-3">
+  <h2 data-lang="contact-title">Contact</h2>
+  <a href="https://github.com/PSHacks" target="_blank">GitHub</a>
+  <!--<a href="mailto:example@example.com">Email</a>
+  <a href="https://t.me/PSHacks" target="_blank">Telegram</a>-->
+</section>
+
+<footer class="fade-in delay-1">
+  <p><a href="https://github.com/PSHacks" target="_blank">github.com/PSHacks</a></p>
+</footer>
+
+<script src="main.js"></script>
 
 </body>
 </html>
